@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'layout.html' %}
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Virtual bookshelf</title>
-        <link rel="stylesheet" href ="css/style.css">
-    </head>
+{% block title %}My Virtual Bookshelf{% endblock %}
 
-    <body>
-        <header>
-
-            <a href="index.html">
-                <div>
-                    <img src="assets/images/logo.png" alt = "My Virtual Bookshelf Logo Icon" height="32">
-                </div>
-            </a>
-
-            <nav>
-                <a href="pages/add-book.html">
-                    <button class="add-button" aria-label="Add new book review">+</button>
-                </a>
-            </nav>
-
-        </header>
-
-        <main>
+{% block content %}
             <div class="book-list-container">
                 <a href="pages/details-little-women.html" class="book-card-link">
                     <div class="book-card">
@@ -110,12 +87,5 @@
                         </div>
                     </div>
                 </a>
-
-        </main>
-
-        <footer>
-            <p>&copy; 2025 MVBookshelf &ndash; My Virtual bookshelf</p>
-        </footer>
-    </body>
-
-</html>
+            </div>
+{% endblock %}

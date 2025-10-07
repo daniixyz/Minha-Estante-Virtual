@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}My Virtual bookshelf{% endblock %}</title>
+        <link rel="stylesheet" href ="../static/css/style.css">
+    </head>
+
+    <body>
+        <header>
+
+            <a href="{{ url_for('index') }}" class="logo-link">
+                <div>
+                    <img src="../static/assets/images/logo.png" alt = "My Virtual Bookshelf Logo Icon" height="32">
+                </div>
+            </a>
+
+            <nav>
+                <a href="add-book.html">
+                    <button class="add-button" aria-label="Add new book review">+</button>
+                </a>
+            </nav>
+
+        </header>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer>
+            <p>&copy; 2025 MVBookshelf &ndash; My Virtual bookshelf</p>
+        </footer>
+    </body>
+
+</html>
